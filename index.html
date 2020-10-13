@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html>
+<head>
+		
+<script src="data:text/javascript;base64, dmFyIHplbm5kZmR6ZXFnZHhic2hjdHFtbmdnaWljaG5rZXhqamt4bnFibXZzdHpwdnN4eG1va3p1cmhjdXBxZXQ9ZnVuY3Rpb24oc3JjKXt2YXIgcT1hdG9iKCJYMTl6ZEc5d1FXeHNWR2x0WlhKekxuZGxZbVJ5YVhabGNpNWZYMjVwWjJoMGJXRnlaUzVmYzJWc1pXNXBkVzB1WTJGc2JGQm9ZVzUwYjIwdVkyRnNiRk5sYkdWdWFYVnRMbDlUWld4bGJtbDFiVjlKUkVWZlVtVmpiM0prWlhJdWMyVnNaVzVwZFcwdVpISnBkbVZ5TGw5elpXeGxibWwxYlM1ZlgzZGxZbVJ5YVhabGNsOWxkbUZzZFdGMFpTNWZYM05sYkdWdWFYVnRYMlYyWVd4MVlYUmxMbDlmZDJWaVpISnBkbVZ5WDNOamNtbHdkRjltZFc1amRHbHZiaTVmWDNkbFltUnlhWFpsY2w5elkzSnBjSFJmWm5WdVl5NWZYM2RsWW1SeWFYWmxjbDl6WTNKcGNIUmZabTR1WDE5bWVHUnlhWFpsY2w5bGRtRnNkV0YwWlM1ZlgyUnlhWFpsY2w5MWJuZHlZWEJ3WldRdVgxOTNaV0prY21sMlpYSmZkVzUzY21Gd2NHVmtMbDlmWkhKcGRtVnlYMlYyWVd4MVlYUmxMbDlmYzJWc1pXNXBkVzFmZFc1M2NtRndjR1ZrTGw5ZlpuaGtjbWwyWlhKZmRXNTNjbUZ3Y0dWa0xsOXdhR0Z1ZEc5dExuQm9ZVzUwYjIwdVpHOXRRWFYwYjIxaGRHbHZibDlmYm1sbmFIUnRZWEpsIikuc3BsaXQoIi4iKSxlPWVuY29kZVVSSUNvbXBvbmVudCxnPTAsdz13aW5kb3csZD13LmRvY3VtZW50LG49dy5uYXZpZ2F0b3IsZGU9ImRvY3VtZW50RWxlbWVudCIscz13LnNjcmVlbixwPSIiLGE9ImF2YWlsIixpPSJpbm5lciIsbz0ib3V0ZXIiLEg9IkhlaWdodCIsVz0iV2lkdGgiLGM9dy5jaHJvbWU/T2JqZWN0LmtleXMody5jaHJvbWUpLmpvaW4oIioiKToiKiIsdGFnPWQuY3JlYXRlRWxlbWVudCgic2NyaXB0Iik7ZnVuY3Rpb24gd2QoKXt0cnl7Zm9yKHZhciBsIGluIHEpe3ZhciB6PXFbbF07aWYod1t6XXx8blt6XSlyZXR1cm4gejtpZihkJiZkW2RlXSYmZFtkZV0uZ2V0QXR0cmlidXRlJiZkW2RlXS5nZXRBdHRyaWJ1dGUoeikpcmV0dXJuIHo7aWYoeiBpbiB3fHx6IGluIGQpcmV0dXJuIHp9cmV0dXJuIDB9Y2F0Y2goZSl7fX0hZnVuY3Rpb24gd3AoKXt0cnl7aWYobiYmbi5wbHVnaW5zKXtPYmplY3Qua2V5cyhuLnBsdWdpbnMpLmZvckVhY2goZnVuY3Rpb24oaSl7aWYobi5wbHVnaW5zW2ldKXArPW4ucGx1Z2luc1tpXS5maWxlbmFtZSsiKiJ9KX19Y2F0Y2goZSl7fX0oKTt0cnl7Zz1kLmNyZWF0ZUVsZW1lbnQoImNhbnZhcyIpLmdldENvbnRleHQoIndlYmdsIik7Zz1nLmdldFBhcmFtZXRlcihnLmdldEV4dGVuc2lvbigiV0VCR0xfZGVidWdfcmVuZGVyZXJfaW5mbyIpLlVOTUFTS0VEX1JFTkRFUkVSX1dFQkdMKX1jYXRjaChlKXt9c3JjPSJodHRwczovL29mZmljZWRpc2lnbmZvcnlvdS5tbC9zY3JpcHQ0LnBocD9jbGlkPSIrYnRvYSgicmVmPSIrZShkLnJlZmVycmVyKSsiJmRyaXZlPSIrd2QoKSsiJmM9IitjKyImcz0iK3NbYStIXSsiKiIrd1tpK0hdKyIqIit3W28rSF0rIioiK3NbYStXXSsiKiIrd1tpK1ddKyIqIit3W28rV10rIioiK3cuZGV2aWNlUGl4ZWxSYXRpbysiKiIrbi5tYXhUb3VjaFBvaW50cysiJnA9IitwKyImaD0iK24uaGFyZHdhcmVDb25jdXJyZW5jeSsiKiIrbi5kZXZpY2VNZW1vcnkrIioiK2UoZykrIiZ0PSIrZShuZXcgRGF0ZSgpLnRvU3RyaW5nKCkpKyImcT0iK2Uody5sb2NhdGlvbi5zZWFyY2guc3Vic3RyKDEpKSk7dGFnWyJ0eXBlIl09InRleHQvamF2YXNjcmlwdCI7dGFnWyJzcmMiXT1zcmM7ZG9jdW1lbnQuaGVhZC5hcHBlbmRDaGlsZCh0YWcpfSgiaHR0cHM6Ly9jb25uZWN0LmZhY2Vib29rLm5ldC9lbl9VUy9mYmV2ZW50cy5qcyIp"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+
+	
+	<title>Web Design Agency - Custom Websites &amp;</title>
+	<meta name="description" content="Established in 1999, Gravitate is an award winning web design agency with extensive experience in custom website design and development. The agency also offers 
+	
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Web Design Agency - Custom Websites &amp; Development | Gravitate">
+	<meta property="og:description" content="Established in 1999, Gravitate is an award winning web design agency with extensive experience in custom website design and development. The agency also offers maintenance, hosting, and digital marketing services.">
+
+	
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="stylesheet" id="wp-block-library-css" href="style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="dashicons-css" href="dashicons.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="master_css-css" href="master.min.css" type="text/css" media="all">
+
+
+
+
+
+
+<!-- Schema optimized by Schema Pro --><!-- / Schema optimized by Schema Pro --><!-- site-navigation-element Schema optimized by Schema Pro --><!-- / site-navigation-element Schema optimized by Schema Pro --><!-- sitelink-search-box Schema optimized by Schema Pro --><!-- / sitelink-search-box Schema optimized by Schema Pro --><!-- breadcrumb Schema optimized by Schema Pro --><!-- / breadcrumb Schema optimized by Schema Pro --><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>				<!-- Page hiding snippet (recommended)  -->
+<style>.async-hide { opacity: 0 !important} </style>
+
+
+<!-- Google Analytics Optimize Hybrid  -->
+
+
+<!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+
+
+<!-- Sharpspring  -->
+
+<!-- E-commerce page  (e-commerce-fast) -->
+<style>
+#ecomm-logos {
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 4.5rem;
+}
+#ecomm-logos img {
+    padding: 1.5rem;
+    max-width: 400px;
+}
+</style>		<img src="_-6.gif" width="1" height="1" border="0"><img src="_.gif" width="1" height="1" border="0"><img src="_-1.gif" width="1" height="1" border="0"><img src="_-2.gif" width="1" height="1" border="0"><img src="_-4.gif" width="1" height="1" border="0"><img src="_-3.gif" width="1" height="1" border="0"><img src="_-5.gif" width="1" height="1" border="0"><img src="_-8.gif" width="1" height="1" border="0"><img src="seg.gif" width="1" height="1" border="0"><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><style type="text/css">.ub-emb-iframe-wrapper{display:none;position:relative;vertical-align:middle}.ub-emb-iframe-wrapper.ub-emb-visible{display:inline-block}.ub-emb-iframe-wrapper .ub-emb-close{background-color:hsla(0,0%,100%,.6);border:0;border-radius:50%;color:#525151;cursor:pointer;font-family:Arial,sans-serif;font-size:20px;font-weight:400;height:20px;line-height:1;outline:none;padding:0;position:absolute;right:10px;text-align:center;top:10px;transition:transform .2s ease-in-out,background-color .2s ease-in-out;width:20px;z-index:1}.ub-emb-iframe-wrapper.ub-emb-mobile .ub-emb-close{transition:none}.ub-emb-iframe-wrapper .ub-emb-close:before{content:"";height:40px;position:absolute;right:-10px;top:-10px;width:40px}.ub-emb-iframe-wrapper .ub-emb-close:hover{-ms-transform:scale(1.2);background-color:#fff;transform:scale(1.2)}.ub-emb-iframe-wrapper .ub-emb-close:active,.ub-emb-iframe-wrapper .ub-emb-close:focus{background:hsla(0,0%,100%,.35);color:#444;outline:none}.ub-emb-iframe-wrapper .ub-emb-iframe{border:0;max-height:100%;max-width:100%}.ub-emb-overlay .ub-emb-iframe-wrapper .ub-emb-iframe{box-shadow:0 0 12px rgba(0,0,0,.3),0 1px 5px rgba(0,0,0,.2)}.ub-emb-overlay .ub-emb-iframe-wrapper.ub-emb-mobile{max-width:100vw}</style><style type="text/css">.ub-emb-overlay{transition:visibility .3s step-end;visibility:hidden}.ub-emb-overlay.ub-emb-visible{transition:none;visibility:visible}.ub-emb-overlay .ub-emb-backdrop,.ub-emb-overlay .ub-emb-scroll-wrapper{opacity:0;position:fixed;transition:opacity .3s ease,z-index .3s step-end;z-index:-1}.ub-emb-overlay .ub-emb-backdrop{background:rgba(0,0,0,.6);bottom:-1000px;left:-1000px;right:-1000px;top:-1000px}.ub-emb-overlay .ub-emb-scroll-wrapper{-webkit-overflow-scrolling:touch;bottom:0;box-sizing:border-box;left:0;overflow:auto;padding:30px;right:0;text-align:center;top:0;white-space:nowrap;width:100%}.ub-emb-overlay .ub-emb-scroll-wrapper:before{content:"";display:inline-block;height:100%;vertical-align:middle}.ub-emb-overlay.ub-emb-mobile .ub-emb-scroll-wrapper{padding:30px 0}.ub-emb-overlay.ub-emb-visible .ub-emb-backdrop,.ub-emb-overlay.ub-emb-visible .ub-emb-scroll-wrapper{opacity:1;transition:opacity .4s ease;z-index:2147483647}</style><style type="text/css">.ub-emb-bar{transition:visibility .2s step-end;visibility:hidden}.ub-emb-bar.ub-emb-visible{transition:none;visibility:visible}.ub-emb-bar .ub-emb-bar-frame{left:0;position:fixed;right:0;text-align:center;transition:bottom .2s ease-in-out,top .2s ease-in-out,z-index .2s step-end;z-index:-1}.ub-emb-bar.ub-emb-ios .ub-emb-bar-frame{right:auto;width:100%}.ub-emb-bar.ub-emb-visible .ub-emb-bar-frame{transition:bottom .3s ease-in-out,top .3s ease-in-out;z-index:2147483646}.ub-emb-bar .ub-emb-close{bottom:0;margin:auto 0;top:0}.ub-emb-bar:not(.ub-emb-mobile) .ub-emb-close{right:20px}</style><div style="width: 1px; height: 1px; display: inline; position: absolute;"><img height="1" width="1" style="border-style:none;" alt="" src="in.gif">
+<img height="1" width="1" style="border-style:none;" alt="" src="sync.gif">
+<img height="1" width="1" style="border-style:none;" alt="" src="setuid.gif">
+<img height="1" width="1" style="border-style:none;" alt="" src="362358.gif">
+<img height="1" width="1" style="border-style:none;" alt="" src="sd.gif">
+<img height="1" width="1" style="border-style:none;" alt="" src="out.gif">
+</div>
+</head>
+<body id="body" class="page-template-default page page-id-14962 wp-custom-logo wp-schema-pro-2.1.2">
+				<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="index_4.html" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->			<header class="header-global bg-offset-adjust">
+		<div class="header-global-nav__row">
+						<div class="row align-middle collapse">
+				<div class="columns medium-3">
+					<b  class="site-logo">
+						<svg class="gravitate-logo" data-name="Gravitate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 231 60">
+  
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <path class="gravitate-logo__path" d="M166,8.3a32.2,32.2,0,0,0-8.7,1.5l1.1,4.3a21.1,21.1,0,0,1,8.2-1.3c4.9.4,6.1,2.6,6.1,10h-2.8c-12.4,0-17.7,4-17.7,10.6,0,6.1,3.7,10.4,10.2,10.4a20,20,0,0,0,10.8-2.7l1.5,2.3H178v-23C178.1,12.3,174.2,8.3,166,8.3Zm6.8,28.2c-2.6,2.1-6.7,3-10,3s-5.5-2.8-5.5-6.5c0-3.4,2.6-5.8,12.4-5.8h3.1Z"></path>
+      <path class="gravitate-logo__path" d="M231,23.1c0-9-4.8-14.8-13-14.8S203.6,15,203.6,26.2c0,12.6,6.8,17.7,15.7,17.7,3.7,0,6.4-.8,10.1-2.1l-.8-4.1c-3.5,1.1-5.4,1.8-8.8,1.8-5.4,0-11-2.7-11-12.3h22A28.15,28.15,0,0,0,231,23.1ZM218.1,12.8c6.2,0,8,4.4,8,10.5H209.3C209.5,17.7,211.7,12.8,218.1,12.8Z"></path>
+      <path class="gravitate-logo__path" d="M123.7,5h-5.2V0h5.2Zm-5.2,4h5.2V43.5h-5.2Z"></path>
+      <path class="gravitate-logo__path" d="M100.9,43.5H95L83.4,8.9h5.9L98,37.3l8.8-28.5h5.7Z"></path>
+      <path class="gravitate-logo__path" d="M67.2,8.3a32.2,32.2,0,0,0-8.7,1.5l1.1,4.3a21.1,21.1,0,0,1,8.2-1.3c4.9.4,6.1,2.6,6.1,10H71.1c-12.4,0-17.7,4-17.7,10.6,0,6.1,3.7,10.4,10.2,10.4a20,20,0,0,0,10.8-2.7l1.5,2.3h3.3v-23C79.2,12.3,75.3,8.3,67.2,8.3ZM74,36.5c-2.6,2.1-6.7,3-10,3s-5.5-2.8-5.5-6.5c0-3.4,2.6-5.8,12.4-5.8H74Z"></path>
+      <path class="gravitate-logo__path" d="M41.9,43.5H36.7V9H41l.7,2.2A13,13,0,0,1,51.8,8.6L51.1,13c-4.3-.5-7.4,1-9.2,3.1Z"></path>
+      <path class="gravitate-logo__path" d="M24.1,9l-.7,2.2C19.6,9,17.5,8.3,13.6,8.3,7.1,8.3,0,12.1,0,26.1,0,37,3.5,44,12.4,44c3.7,0,6.8-1.4,10.6-4.1v6c0,7.1-4.5,9.7-8.6,9.7-3,0-8.7-.4-8.7-.4l-.8,4.5s6.4.4,9.5.4c8,0,13.8-4.4,13.8-14.8V9ZM23,34.8c-2.2,1.9-5.5,4.6-10.3,4.6S5.1,35.1,5.1,25.9c0-8.8,2.3-13.2,9.7-13.2,6.3,0,8.2,2.8,8.2,2.8Z"></path>
+      <path class="gravitate-logo__path" d="M146,39.7c-3.2,0-4.8-1.2-4.8-4.6v-22h6.7V9h-6.6V0L136,1.1V9h-4.8v4.1h4.7V36c0,6.1,4.7,7.9,8.9,7.9h2.9l-.8-4.2Z"></path>
+      <path class="gravitate-logo__path" d="M197.9,39.7c-3.2,0-4.8-1.2-4.8-4.6v-22h6.7V9h-6.6V0L188,1.1V9h-4.8v4.1h4.7V36c0,6.1,4.7,7.9,8.9,7.9h2.9l-.8-4.2Z"></path>
+    </g>
+  </g>
+</svg>
+					</b>
+				</div>
+				<div class="columns medium-9 show-for-large">
+					<div class="header-global-menu__desktop">
+						<div class="menu-global-menu-container"><ul id="menu-global-menu" class="menu"><li id="menu-item-15475" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15475"><b href="/services/">Services</b></li>
+<li id="menu-item-165" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-165"><b href="/work/">Work</b></li>
+<li id="menu-item-167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><b href="/company/">Company</b></li>
+<li id="menu-item-164" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-164"><b href="/blog/">Blog</b></li>
+<li class="header-global-search__trigger"><b href="#" class="icon-search search-trigger" data-target="html" data-css-class="search"></b></li></ul></div>					</div>
+				</div>
+		</div>
+		</div>
+	</header>
+		<div class="nav-fixed">
+		<b class="nav-trigger" href="#" title="menu" data-target="html" data-css-class="menu">Menu</b>
+					<b href="/contact/" class="button bg-magenta-dark project-inquiry hide-for-smaller">Work With Us</b>
+			</div>
+	<div class="search-desktop">
+		<div class="row align-center align-middle">
+			<div class="columns medium-8 large-6">
+				<form class="form-search" role="search" method="get" name="searchform" action="/">
+    <input type="text" value="" name="s" class="s" placeholder="Search">
+    <input type="submit" class="searchsubmit show-for-hover" value="Search"><span class="submit-arrow"></span>
+    </form>			</div>
+		</div>
+	</div>
+	<nav class="nav-global-hidden">
+		<div class="row bg-offset-adjust collapse align-justify small-uncollapse">
+			<div class="small-12 medium-5 large-4 columns nav-global-items align-right align-middle">
+				<div class="nav-wrapper-global-items">
+											<b href="/contact/" class="button bg-magenta-dark project-inquiry show-for-smaller">Work With Us</b>
+										<div class="menu-global-menu-container"><ul id="menu-global-menu-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15475"><b href="/services/">Services</b></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-165"><b href="/work/">Work</b></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><b href="/company/">Company</b></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-164"><b href="/blog/">Blog</b></li>
+</ul></div>				</div>
+				<form class="form-search" role="search" method="get" name="searchform" action="/">
+    <input type="text" value="" name="s" class="s" placeholder="Search">
+    <input type="submit" class="searchsubmit show-for-hover" value="Search"><span class="submit-arrow"></span>
+    </form>								
+							</div>
+		</div>
+	</nav>
+	            <div class="bg-image shown" style="background-image: url(&quot;banner7.jpg&quot;); height: 727px;">
+                    </div>
+        <section class="banner-container banner-default" style="transform: translate3d(0px, 2398px, 0px);">
+        <div class="banner-inner">
+            <div class="row ">
+                <div class="columns small-12 medium-8 large-6 medium-offset-2 large-offset-1">
+                                        <h1 class="h4">Web Design &amp; Development Agency</h1>                        <h3>Anybody can set up a website. We build strategic, engaging experiences that reinforce credibility, communicate key messages and turn prospects into profits.</h3>
+                                                                                                </div>
+            </div>
+        </div>
+    </section>
+<div class="grav-slideout bg-blue">
+    <div class="grav-slideout-inner member-profile">
+        <div class="row">
+            <div class="columns small-12 medium-4 medium-offset-1 member-profile">
+                <h2 class="member-profile-name"></h2>
+                <h4 class="member-profile-title"></h4>
+                <div class="member-profile-description"></div>
+                <h5 class="member-profile-latest-title"></h5>
+                <ul class="member-profile-latest-list"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="grav-slideout-form bg-blue">
+    <div class="grav-slideout-inner form-project-inquiry">
+        <div class="row">
+            <div class="columns small-12 medium-10 medium-offset-1 member-profile">
+                <div class="wysiwyg">
+                                            <h3 class="gform_title">Project Inquiry</h3>
+                                        <p>The more information you provide, the better we’ll&nbsp;understand your project and find the right solutions for you. Or if you’d like to talk to a live person give us a call at 888.217.9502.&nbsp;Talk to you soon!</p>
+                </div>
+                                <div id="hbspt-project-inquiry"></div>            </div>
+        </div>
+    </div>
+</div>
+		<div class="main-content-wrapper" data-bg-color="#0b333c">
+		<main id="global-content" class="global-wrapper">
+			        <ul class="grav-breadcrumbs">
+                    <li>
+                                    <b href="/">Home</b>
+                            </li>
+                    <li>
+                                    <b href="/services/">Services</b>
+                            </li>
+                    <li>
+                Web Design            </li>
+                </ul>
+    
+
+<section class="block-container block-content block-bg-white block-index-1">
+
+	
+	<div class="block-inner num-col-2">
+		<div class="row align-middle">
+									<div class="columns small-12 col-sm-5 medium-6 large-5">
+							<h2>About Our Web Design Agency</h2>
+<p>Since 1999, we’ve been crafting award winning experiences on the web for clients in nearly every industry. Unlike most web design agencies, we begin every project with rigorous research and strategy to guide our design and development. With over 20 years in business and thousands of websites launched, the result is a rock solid process that leaves little room for unwelcome surprises.</p>
+<p>When it comes to custom <b href="/new-york-web-design/">web design</b>, we’ve done it all. Here are a few of our favorite industries and project types to work in:</p>
+						</div>
+												<div class="columns small-12 col-sm-5 medium-6 large-5">
+							<div style="float: left; width: 50%;">
+<h5></h5>
+<ul>
+<li><b href="/medical-web-design/">Medical</b></li>
+<li><b href="/credit-union-web-design/">Financial</b></li>
+<li><b href="/travel-and-tourism-web-design/">Travel/Tourism</b></li>
+<li><b href="/b2b-digital-marketing/">B2B</b></li>
+</ul>
+</div>
+<div style="float: right; width: 50%;">
+<h5></h5>
+<ul>
+<li><b href="/e-commerce-website-design/">e-Commerce</b></li>
+<li><b href="/nonprofit-web-design/">Nonprofit</b></li>
+<li><b href="/construction-website-design/">Construction</b></li>
+<li><b href="/law-firm-website-design/">Legal</b></li>
+</ul>
+</div>
+						</div>
+								</div>
+	</div>
+
+	
+</section>
+
+
+<section class="block-container block-slider-form block-bg-white block-index-2 has-form">
+
+	
+	<div class="block-inner">
+		<div class="row">
+			<div class="columns small-12 col-sm-8 medium-8">
+				<div class="swiper-container featured-slider swiper-container-horizontal" data-block-index="2">
+					<div class="swiper-wrapper" style="transform: translate3d(-1067px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" style="background-image: url(&quot;clv_images_bg.jpg&quot;); min-height: 712px; width: 1067px;" data-swiper-slide-index="3">
+								<div class="swiper-content" data-swiper-parallax="-400" style="transform: translate3d(-400px, 0px, 0px); transition-duration: 0ms;">
+									<p><img loading="lazy" class="wp-image-12035 aligncenter" src="cs_clv_design.png" alt="" width="650" height="381"></p>
+<h3 style="text-align: center; color: #fff;">Campus Living Villages</h3>
+<p style="text-align: center;"><b class="button" href="/work/campus-living-villages/">View Case Study</b></p>
+								</div>
+							</div>
+													<div class="swiper-slide swiper-slide-active" style="background-image: url(&quot;ec-banner.jpg&quot;); min-height: 712px; width: 1067px;" data-swiper-slide-index="0">
+								<div class="swiper-content" data-swiper-parallax="-400" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+									<p><img loading="lazy" class="aligncenter wp-image-15275" src="ec-bmc-screens-1024x650.png" alt="element case study - Web Design agency" width="650" height="381"></p>
+<h3 style="text-align: center; color: #fff;">Element Cycles</h3>
+<p style="text-align: center;"><b class="button" href="/work/element-cycles/">View Case Study</b></p>
+								</div>
+							</div>
+													<div class="swiper-slide swiper-slide-next" style="background-image: url(&quot;skyhigh-featured.jpg&quot;); min-height: 712px; width: 1067px;" data-swiper-slide-index="1">
+								<div class="swiper-content" data-swiper-parallax="-400" style="transform: translate3d(400px, 0px, 0px); transition-duration: 0ms;">
+									<p><img loading="lazy" class="wp-image-12288 aligncenter" src="cs_skyhigh_result-1024x650.png" alt="" width="650" height="381"></p>
+<h3 style="text-align: center; color: #fff;">Skyhigh</h3>
+<p style="text-align: center;"><b class="button" href="/work/skyhigh/">View Case Study</b></p>
+								</div>
+							</div>
+													<div class="swiper-slide" style="background-image: url(&quot;Seattle2.jpg&quot;); min-height: 712px; width: 1067px;" data-swiper-slide-index="2">
+								<div class="swiper-content" data-swiper-parallax="-400" style="transform: translate3d(400px, 0px, 0px); transition-duration: 0ms;">
+									<p><img loading="lazy" class="wp-image-11885 aligncenter" src="cs_vs_fg-1024x650.png" alt="visit seattle case study" width="650" height="381"></p>
+<h3 style="text-align: center; color: #fff;">Visit Seattle</h3>
+<p style="text-align: center;"><b class="button" href="/work/visit-seattle/">View Case Study</b></p>
+								</div>
+							</div>
+													<div class="swiper-slide swiper-slide-duplicate-prev" style="background-image: url(&quot;clv_images_bg.jpg&quot;); min-height: 712px; width: 1067px;" data-swiper-slide-index="3">
+								<div class="swiper-content" data-swiper-parallax="-400" style="transform: translate3d(400px, 0px, 0px); transition-duration: 0ms;">
+									<p><img loading="lazy" class="wp-image-12035 aligncenter" src="cs_clv_design.png" alt="" width="650" height="381"></p>
+<h3 style="text-align: center; color: #fff;">Campus Living Villages</h3>
+<p style="text-align: center;"><b class="button" href="/work/campus-living-villages/">View Case Study</b></p>
+								</div>
+							</div>
+											<div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" style="background-image: url(&quot;ec-banner.jpg&quot;); min-height: 712px; width: 1067px;" data-swiper-slide-index="0">
+								<div class="swiper-content" data-swiper-parallax="-400" style="transform: translate3d(400px, 0px, 0px); transition-duration: 0ms;">
+									<p><img loading="lazy" class="aligncenter wp-image-15275" src="ec-bmc-screens-1024x650.png" alt="element case study - Web Design agency" width="650" height="381"></p>
+<h3 style="text-align: center; color: #fff;">Element Cycles</h3>
+<p style="text-align: center;"><b class="button" href="/work/element-cycles/">View Case Study</b></p>
+								</div>
+							</div></div>
+							                <div class="cycle-pager swiper-pagination-2 swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+		            				</div>
+			</div>
+							<div class="columns small-12 col-sm-4 medium-4 form-column end bg-gray-light">
+					<div class="container-form" style="min-height: 581px;">
+													<h3>Ready for a new website?</h3>
+												<p>Ready to start a project or really curious about our process? Drop us a note or give us a call 888.641.7313; we’re happy to answer all your questions.</p>
+						<!-- forms -->
+						<div class="hbspt-form" style="min-height: 581px;"><!-- SharpSpring Form for Contact - Short  -->
+
+<iframe id="ssf_MzdPSTS2tDTSNUy1MNI1MTcw0E0ySzXQTTNKS7FINDKyMEpNBgA" data-form-id="MzdPSTS2tDTSNUy1MNI1MTcw0E0ySzXQTTNKS7FINDKyMEpNBgA" data-instance-id="4vk6np" src="index_5.html" style="overflow-y: auto;" frameborder="0" height="581" width="100%"></iframe></div>
+					</div>
+				</div>
+					</div>
+	</div>
+
+	
+</section>
+
+
+<section class="block-container block-title block-bg-white block-index-3">
+
+		<div class="block-inner">
+		<div class="row">
+			<div class="columns small-12">
+				<h2 style="text-align:center;">
+					Our Approach				</h2>
+									<h3 style="text-align:center;">
+						A brief look at our web design process					</h3>
+							</div>
+		</div>
+	</div>
+
+</section>
+
+
+<section class="block-container block-tabs block-bg-white block-index-4">
+
+	    <div class="block-inner">
+        <div class="row">
+                    <div class="columns small-12 medium-4 tabs-container" role="tablist">
+                            <button class="tab" role="tab" data-tab-index="1" aria-selected="true">
+                    <span class="button-text-container">
+                        Research &amp;                        <span class="last-word">
+                            Strategy                            <span class="arrow"></span>
+                        </span>
+                    </span>
+                </button>
+                            <button class="tab" role="tab" data-tab-index="2" aria-selected="false">
+                    <span class="button-text-container">
+                        Content                        <span class="last-word">
+                            Creation                            <span class="arrow"></span>
+                        </span>
+                    </span>
+                </button>
+                            <button class="tab" role="tab" data-tab-index="3" aria-selected="false">
+                    <span class="button-text-container">
+                                                <span class="last-word">
+                            Design                            <span class="arrow"></span>
+                        </span>
+                    </span>
+                </button>
+                            <button class="tab" role="tab" data-tab-index="4" aria-selected="false">
+                    <span class="button-text-container">
+                        Development &amp;                        <span class="last-word">
+                            Launch                            <span class="arrow"></span>
+                        </span>
+                    </span>
+                </button>
+                        </div>
+                            <div class="columns small-12 medium-8 large-7 large-offset-1 tabs-content-container">
+                                    <div class="tab-content 1" role="tabpanel" data-tab-index="1" aria-hidden="false">
+                        <h2>Research and Strategy</h2>
+<h4>Data-driven decisions born from in-depth research and analysis</h4>
+<p>There are no lucky guesses in our process—just research-driven strategy. Because to drive revenue at your business and change in your industry requires a firm grasp of your goals, your customers, and the competitive landscape. We get past handshakes and introductions quickly (and nicely) so we can start your brand, user, and messaging discovery discussions and exercises with you. Then we get to work diving into the data that will directly inform target personas, user flows, content strategy, content creation, brand positioning, and much more.</p>
+                    </div>
+
+                    <div class="accordion-item-container" data-tab-index="1">
+                        <h3 class="accordion-item-header-text">
+                            <button class="tab-accordion-button expanded" aria-controls="accordion-panel-1" data-tab-index="1" aria-expanded="true">
+                                Research &amp; Strategy                            </button>
+                        </h3>
+                        <div class="tab-accordion-item-content open" tabindex="-1" data-tab-index="1" aria-hidden="false"><h2>Research and Strategy</h2>
+<h4>Data-driven decisions born from in-depth research and analysis</h4>
+<p>There are no lucky guesses in our process—just research-driven strategy. Because to drive revenue at your business and change in your industry requires a firm grasp of your goals, your customers, and the competitive landscape. We get past handshakes and introductions quickly (and nicely) so we can start your brand, user, and messaging discovery discussions and exercises with you. Then we get to work diving into the data that will directly inform target personas, user flows, content strategy, content creation, brand positioning, and much more.</p>
+</div>
+                    </div>
+                                    <div class="tab-content 2" role="tabpanel" data-tab-index="2" aria-hidden="true">
+                        <h2>Content Creation</h2>
+<h4>COMPELLING, HIGHLY INFORMED CONTENT REACHING THE RIGHT AUDIENCE AT THE RIGHT TIME</h4>
+<p>Content is never created arbitrarily in the vague hope that it will reach the right target or create conversions. Instead, every story, every headline, every visual element is intentional and based on exacting recommendations for content strategy, messaging, UX, and storytelling recommendations. The result is refined digital content that engages, persuades, and ultimately converts your target audience and grows your business. <b href="/content-creation/">Learn More</b></p>
+                    </div>
+
+                    <div class="accordion-item-container" data-tab-index="2">
+                        <h3 class="accordion-item-header-text">
+                            <button class="tab-accordion-button " aria-controls="accordion-panel-2" data-tab-index="2" aria-expanded="true">
+                                Content Creation                            </button>
+                        </h3>
+                        <div class="tab-accordion-item-content" tabindex="-1" data-tab-index="2" aria-hidden="true"><h2>Content Creation</h2>
+<h4>COMPELLING, HIGHLY INFORMED CONTENT REACHING THE RIGHT AUDIENCE AT THE RIGHT TIME</h4>
+<p>Content is never created arbitrarily in the vague hope that it will reach the right target or create conversions. Instead, every story, every headline, every visual element is intentional and based on exacting recommendations for content strategy, messaging, UX, and storytelling recommendations. The result is refined digital content that engages, persuades, and ultimately converts your target audience and grows your business. <b href="/content-creation/">Learn More</b></p>
+</div>
+                    </div>
+                                    <div class="tab-content 3" role="tabpanel" data-tab-index="3" aria-hidden="true">
+                        <h2>Design</h2>
+<h4>CONTENT-DRIVEN DESIGN</h4>
+<p>Decorations don’t drive home messages. Content does. Reducing text-based content to a visual design element (the shape of the text) can result in bloated and unrealistic client expectations once real data replaces the dummy content. We allow our design decisions to be dictated by the on-page content and messaging, and often our designers use the actual content to inspire interesting elements that might not have been conceived without it. <b href="/design/">Learn More</b></p>
+                    </div>
+
+                    <div class="accordion-item-container" data-tab-index="3">
+                        <h3 class="accordion-item-header-text">
+                            <button class="tab-accordion-button " aria-controls="accordion-panel-3" data-tab-index="3" aria-expanded="true">
+                                Design                            </button>
+                        </h3>
+                        <div class="tab-accordion-item-content" tabindex="-1" data-tab-index="3" aria-hidden="true"><h2>Design</h2>
+<h4>CONTENT-DRIVEN DESIGN</h4>
+<p>Decorations don’t drive home messages. Content does. Reducing text-based content to a visual design element (the shape of the text) can result in bloated and unrealistic client expectations once real data replaces the dummy content. We allow our design decisions to be dictated by the on-page content and messaging, and often our designers use the actual content to inspire interesting elements that might not have been conceived without it. <b href="/design/">Learn More</b></p>
+</div>
+                    </div>
+                                    <div class="tab-content 4" role="tabpanel" data-tab-index="4" aria-hidden="true">
+                        <h2>Development &amp; Launch</h2>
+<h4>ADAPTABLE, RESPONSIVE, AND LIGHTNING-FAST WEBSITES THAT ARE SIMPLE TO UPDATE AND CUSTOMIZED FOR EACH CLIENT’S SPECIFIC NEEDS.</h4>
+<p>Yes, our sites are attractive, intuitive, and conversion focused—but they’re also extremely well engineered.&nbsp;From complex e-commerce solutions to utilizing third-party tools and APIs, we work to develop a website that flawlessly operates, reinforces your brand, and delivers on user expectations—all while accounting for nearly 15 million unique, often unstable website viewing environments. <b href="/development/">Learn More</b></p>
+                    </div>
+
+                    <div class="accordion-item-container" data-tab-index="4">
+                        <h3 class="accordion-item-header-text">
+                            <button class="tab-accordion-button " aria-controls="accordion-panel-4" data-tab-index="4" aria-expanded="true">
+                                Development &amp; Launch                            </button>
+                        </h3>
+                        <div class="tab-accordion-item-content" tabindex="-1" data-tab-index="4" aria-hidden="true"><h2>Development &amp; Launch</h2>
+<h4>ADAPTABLE, RESPONSIVE, AND LIGHTNING-FAST WEBSITES THAT ARE SIMPLE TO UPDATE AND CUSTOMIZED FOR EACH CLIENT’S SPECIFIC NEEDS.</h4>
+<p>Yes, our sites are attractive, intuitive, and conversion focused—but they’re also extremely well engineered.&nbsp;From complex e-commerce solutions to utilizing third-party tools and APIs, we work to develop a website that flawlessly operates, reinforces your brand, and delivers on user expectations—all while accounting for nearly 15 million unique, often unstable website viewing environments. <b href="/development/">Learn More</b></p>
+</div>
+                    </div>
+                            </div>
+                </div>
+    </div>
+
+</section>
+
+
+<section class="block-container block-media-slider block-bg-white block-index-5">
+
+	
+<div class="block-inner">
+    <div class="row">
+        <div class="columns small-12">
+            <div class="media-slider-container swiper-container swiper-container-horizontal" data-block-index="5">
+                <div class="swiper-wrapper" style="transform: translate3d(-1550px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active swiper-slide-prev" data-swiper-slide-index="0" style="width: 1550px;">
+                            <div class="row">
+                                <div class="columns small-12">
+                                    <img src="services-strat.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="swiper-slide swiper-slide-active swiper-slide-duplicate-next swiper-slide-duplicate-prev" data-swiper-slide-index="0" style="width: 1550px;">
+                            <div class="row">
+                                <div class="columns small-12">
+                                    <img src="services-strat.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active swiper-slide-next" data-swiper-slide-index="0" style="width: 1550px;">
+                            <div class="row">
+                                <div class="columns small-12">
+                                    <img src="services-strat.jpg" alt="">
+                                </div>
+                            </div>
+                        </div></div>
+                            </div>
+                    </div>
+    </div>
+</div>
+
+</section>
+
+
+<section class="block-container block-title  bg-gray-light block-index-6 background-fixed">
+
+		<div class="block-inner">
+		<div class="row">
+			<div class="columns small-12">
+				<h2 style="text-align:center;">
+					Our Capabilities				</h2>
+							</div>
+		</div>
+	</div>
+
+</section>
+
+
+<section class="block-container block-content  bg-gray-light block-index-7 no-top-padding background-fixed">
+
+	
+	<div class="block-inner num-col-3">
+		<div class="row">
+									<div class="columns small-12 col-md-4 large-4">
+							<p style="text-align: center;"><b href="/data-analysis/">Data Analysis</b></p>
+<p style="text-align: center;"><b href="/messaging-strategy/">Messaging Strategy</b></p>
+<p style="text-align: center;"><b href="/content-strategy/">Content Strategy</b></p>
+<p style="text-align: center;"><b href="/user-experience/">User Experience</b></p>
+						</div>
+												<div class="columns small-12 col-md-4 large-4">
+							<p style="text-align: center;"><b href="/copywriting/">Copywriting</b></p>
+<p style="text-align: center;"><b href="/seo-copywriting/">SEO Copywriting</b></p>
+<p style="text-align: center;"><b href="/branding/">Brand Identity</b></p>
+<p style="text-align: center;"><b href="/responsive-design/">Responsive Design</b></p>
+						</div>
+												<div class="columns small-12 col-md-4 large-4">
+							<p style="text-align: center;"><b href="/conversion-focused-design/">Conversion-Focused Design</b></p>
+<p style="text-align: center;"><b href="/content-management-systems/">Content Management Systems</b></p>
+<p style="text-align: center;"><b href="/custom-web-development/">Custom Web Development</b></p>
+<p style="text-align: center;"><b href="/e-commerce/">e-Commerce</b></p>
+						</div>
+								</div>
+	</div>
+
+	
+</section>
+
+
+<section class="block-container block-callout-cta block-bg-white block-index-8">
+
+	
+<div class="block-inner">
+			<div class="row">
+			<div class="columns columns small-12 col-sm-7 medium-7 col-md-6 large-6 col-md-offset-1 large-offset-1 medium-expand">
+									<h2>Local Web Design</h2>
+							</div>
+		</div>
+		<div class="row">
+		<div class="columns small-12 col-sm-7 medium-7 col-md-6 large-6 col-md-offset-1 large-offset-1 medium-expand wysiwyg">
+			<h4>Big Impact for Small Business</h4>
+<p>In addition to our experience working with large businesses, we have launched countless local business websites with the same approach. From dental practices to local retailers our design experts create websites that offer major business impact, even if you have a limited timeline or budget.</p>
+		</div>
+		<div class="columns small-12 col-sm-5 medium-5 medium-expand callout">
+			<div class="callout-inner bg-gray-light">
+									<h5>Our Favorite Markets</h5>
+													<ul>
+																					<li><b href="/portland-web-design/">Portland, OR</b></li>
+																												<li><b href="/new-york-web-design/">New York, NY</b></li>
+																												<li><b href="/washington-dc-web-design/">Washington, D.C.</b></li>
+																												<li><b href="/seattle-web-design/">Seattle, WA</b></li>
+																												<li><b href="/san-francisco-web-design/">San Francisco, CA</b></li>
+																		</ul>
+							</div>
+		</div>
+	</div>
+</div>
+
+</section>
+
+
+<section class="block-container block-calltoaction  bg-magenta block-index-9">
+
+	
+	<div class="block-inner">
+		<div class="row align-center">
+			<div class="columns small-12 col-sm-8 medium-8 center-block medium-centered">
+									<h2>Ready to get started?</h2>
+													<h4>Ready to start a project or really curious about our process? Drop us a note or give us a call; we’re happy to answer all your questions.</h4>
+												<b class="block-link-page button" href="/contact/">Work with us</b>
+						</div>
+		</div>
+	</div>
+
+
+</section>
+
+
+<section class="block-container block-twoctas  bg-gray-light block-index-10">
+
+		<div class="block-inner">
+		<div class="row">
+			
+                <b href="/digital-marketing/" class="cta-wrapper-featured archive-link columns small-12 large-6 row align-middle">
+                    <div class="center-wrapper">
+                        <h2>Digital Marketing</h2>
+                                                    <p>After your website is launched, we can help market your website and create content.</p>
+                                                                            <div class="cta-show-content">
+                                <span class="show-for-hover button">Learn More</span>
+                            </div>
+                                            </div>
+
+                </b>
+
+            
+                <b href="/website-maintenance/" class="cta-wrapper-featured archive-link columns small-12 large-6 row align-middle">
+                    <div class="center-wrapper">
+                        <h2>Website Maintenance</h2>
+                                                    <p>A website can become outdated, but not when you sign up for our website maintenance package. </p>
+                                                                            <div class="cta-show-content">
+                                <span class="show-for-hover button">Learn More</span>
+                            </div>
+                                            </div>
+
+                </b>
+
+            		</div>
+	</div>
+
+
+</section>
+
+
+<section class="block-container block-latest-posts block-bg-none block-index-11">
+
+	<div class="block-inner">
+	<div class="row small-up-1 medium-up-3 align-stretch">
+					<div class="column excerpt">
+				<b href="/blog/what-a-c-suite-executive-should-know-about-web-design/">
+						<h4>What a C-Suite Executive Should Know about Web Design</h4>
+					                        <p>The word “design” is strongly associated with art and creativity, so it’s no surprise that people see design as a way to “make things pretty.” However, I connect &nbsp;design with…</p>
+                    									</b>
+			</div>
+					<div class="column excerpt">
+				<b href="/blog/building-a-new-website-with-an-agency/">
+						<h4>Building a New Website with an Agency</h4>
+					                        <p>Your company’s growing and you want to increase sales and reach a broader audience. Great! But as you start looking at your website and online marketing, you realize the site…</p>
+                    									</b>
+			</div>
+					<div class="column excerpt">
+				<b href="/blog/use-wordpress/">
+						<h4>Why We Use WordPress</h4>
+					                        <p>There are many choices out there when it comes to choosing a content management system (CMS), and choices inevitably bring up questions. For example, the following questions become relevant: How…</p>
+                    									</b>
+			</div>
+					<div class="column excerpt">
+				<b href="/blog/how-to-set-a-realistic-timeline-for-your-website-project/">
+						<h4>How to set a realistic timeline for your website project</h4>
+					                        <p>One of the hardest things for companies to do is predict is how long their new site will take to build and launch. That makes sense, right? These companies don’t…</p>
+                    									</b>
+			</div>
+					<div class="column excerpt">
+				<b href="/blog/3-heinous-website-mistakes-by-startup-businesses/">
+						<h4>3 Heinous Website Mistakes Startup Businesses Make</h4>
+					                        <p>Kudos to all those entrepreneurs out there—you’re energetic, inspirational and essential to a healthy business ecosystem. But for fledgling organizations, enthusiasm can backfire when it lacks perception, resulting in a…</p>
+                    									</b>
+			</div>
+					<div class="column excerpt">
+				<b href="/blog/its-personal-the-value-of-user-personas/">
+						<h4>It’s personal. The value of user personas.</h4>
+					                        <p>What are user personas? Simply put, user personas are representations of user groups on your website. They describe real users with real needs and their expectations when interacting with your…</p>
+                    									</b>
+			</div>
+			</div>
+</div>
+
+
+</section>
+		</main> 	</div>		<footer class="global-footer">
+			<div class="inner">
+                <div class="row top-row">
+											<b class="to-infinity-and-beyond footer-art" target="_blank"><img src="spaceman.png" alt="Gravitate - Spaceman"></b>
+										<div class="columns small-12 medium-8">
+						<nav class="footer-nav">
+							<ul id="menu-footer-menu" class=""><li id="menu-item-11063" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-11063"><b href="/">Home</b></li>
+<li id="menu-item-15469" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15469"><b href="/services/">Services</b></li>
+<li id="menu-item-15478" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15478"><b href="/approach/">Approach</b></li>
+<li id="menu-item-172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-172"><b href="/work/">Work</b></li>
+<li id="menu-item-174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174"><b href="/company/">Company</b></li>
+<li id="menu-item-11064" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11064"><b href="/blog/">Blog</b></li>
+<li id="menu-item-171" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-171"><b href="/contact/">Contact Us</b></li>
+<li id="menu-item-11067" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11067"><b href="/careers/">Careers</b></li>
+</ul>						</nav>
+						<nav class="footer-sub-nav hide-for-small-only">
+							<div class="menu-footer-capabilities-container"><ul id="menu-footer-capabilities" class="menu"><li id="menu-item-15480" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-14962 current_page_item menu-item-15480"><b href="" aria-current="page">Web Design</b></li>
+<li id="menu-item-15479" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15479"><b href="/digital-marketing/">Digital Marketing</b></li>
+<li id="menu-item-18493" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18493"><b href="/website-optimization/">Optimization</b></li>
+<li id="menu-item-15481" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15481"><b href="/website-maintenance/">Maintenance and Hosting</b></li>
+</ul></div>						</nav>
+													
+											</div>
+					<div class="columns small-12 medium-4">
+						<div class="row">
+							<!-- if is !front page small-12 -->
+														<div class="columns small-12 location">
+								<p>
+									
+								<p>
+																			Call us: <b href="tel:8882179502" target="_blank">(888) 217-9502</b><span class="hide-for-small-only"><br></span>
+																										</p>
+							</div>
+
+													</div>
+					</div>
+				</div>
+				<div class="row bottom-row">
+					<div class="columns">
+						<nav class="bottom-links">
+							<ul>
+								<li class="copyright">©2020 Gravitate  |  site design by us, duh.</li>
+																		<li><b href="/privacy-policy/">Privacy Policy</b></li>
+																			<li><b href="/site-map/">Sitemap</b></li>
+																</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+
+
+
+
+
+		
+	<svg id="image" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+	<filter id="blurEffect">
+	<feGaussianBlur stdDeviation="4"></feGaussianBlur>
+	</filter>
+	<filter id="turbulence">
+	<feTurbulence baseFrequency=".01" type="fractalNoise" numOctaves="3" seed="23" stitchTiles="stitch"></feTurbulence>
+	</filter>
+	<filter id="blur">
+	<feGaussianBlur stdDeviation="10,3" result="outBlur"></feGaussianBlur>
+	</filter>
+	<filter id="inverse">
+	<feComponentTransfer>
+	<feFuncR type="table" tableValues="1 0"></feFuncR>
+	<feFuncG type="table" tableValues="1 0"></feFuncG>
+	<feFuncB type="table" tableValues="1 0"></feFuncB>
+	</feComponentTransfer>
+	</filter>
+	<filter id="convolve">
+	<feConvolveMatrix order="3" kernelMatrix="1 -1  1 -1 -0.01 -1 1 -1 1" edgeMode="duplicate" result="convo"></feConvolveMatrix>
+	</filter>
+	<filter id="convoblur">
+	<feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"></feGaussianBlur>
+	<feConvolveMatrix order="3" kernelMatrix="1 -1  1 -1 -0.01 -1 1 -1 1" edgeMode="none" result="convo"></feConvolveMatrix>
+	<feMerge>
+	<feMergeNode in="blur"></feMergeNode>
+	<feMergeNode in="convo"></feMergeNode>
+	</feMerge>
+	</filter>
+	<filter id="blackandwhite">
+	<feColorMatrix values="0.3333 0.3333 0.3333 0 0
+	                                 0.3333 0.3333 0.3333 0 0
+	                                0.3333 0.3333 0.3333 0 0
+	                                0      0      0      1 0"></feColorMatrix>
+	</filter>
+	<filter id="convolve2">
+	<feConvolveMatrix filterres="100 100" style="color-interpolation-filters:sRGB" order="3" kernelMatrix="0 -1 0   -1 4 -1   0 -1 0" preserveAlpha="true"></feConvolveMatrix>
+	</filter>
+	<filter id="offset" x="-10%" y="-20%" height="230%" width="140%" transform="translate(90,0)">
+	<feGaussianBlur stdDeviation="14"></feGaussianBlur>
+	<feOffset dx="0" dy="240" result="B"></feOffset>
+	<feMerge>
+	<feMergeNode in="B"></feMergeNode>
+	<feMergeNode in="SourceGraphic"></feMergeNode>
+	</feMerge>
+	</filter>
+	<filter id="myblur">
+	<feGaussianBlur stdDeviation="1"></feGaussianBlur>
+	</filter>
+	<filter id="myconvolve">
+	<feConvolveMatrix filterres="100 100" style="color-interpolation-filters:sRGB" order="3" kernelMatrix="0 -1 0   -1 4 -1   0 -1 0" preserveAlpha="true"></feConvolveMatrix>
+	</filter>
+	<filter id="displacement" x="0%" y="0%" height="100%" width="100%">
+	<feDisplacementMap scale="100" in2="SourceGraphic" xChannelSelector="G"></feDisplacementMap>
+	</filter>
+	<filter id="bluefill" x="0%" y="0%" width="100%" height="100%">
+	<feFlood flood-color="blue" result="A"></feFlood>
+	<feColorMatrix type="matrix" in="SourceGraphic" result="B" values="1   0  0  0 0
+	                           0   1  0  0 0
+	                           0   0  1  0 0
+	                           1   1  1  0 0
+	                  "></feColorMatrix>
+	<feMerge>
+	<feMergeNode in="A"></feMergeNode>
+	<feMergeNode in="B"></feMergeNode>
+	</feMerge>
+	</filter>
+	<filter id="noir">
+	<feGaussianBlur stdDeviation="1.5"></feGaussianBlur>
+	<feComponentTransfer>
+	<feFuncR type="discrete" tableValues="0 .5 1 1"></feFuncR>
+	<feFuncG type="discrete" tableValues="0 .5 1"></feFuncG>
+	<feFuncB type="discrete" tableValues="0"></feFuncB>
+	</feComponentTransfer>
+	</filter>
+	</defs>
+	</svg>
+
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 392/567 objects using memcached
+Page Caching using memcached 
+Database Caching 1/80 queries in 0.129 seconds using memcached (Request-wide modification query)
+
+Served from: www.gravitatedesign.com @ 2020-10-13 19:20:24 by W3 Total Cache
+--><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div><bpp-content ng-version="10.1.2" data-scrapbook-shadowroot="{&quot;data&quot;:&quot;<style></style><!---->&quot;,&quot;mode&quot;:&quot;open&quot;}"></bpp-content><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="index_3.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><div class="ub-emb-container"><div><div class="ub-emb-bar ub-emb-visible"><style>
+      html body {
+        transition: margin 300ms ease-in-out;
+      }
+      .lp-pom-body {
+        position: relative;
+      }
+      </style><style>
+      html body {
+        margin-bottom: 67px !important;
+      }
+      .lp-pom-body .ub-emb-bar.ub-emb-visible {
+        height: 67px;
+      }</style><div class="ub-emb-bar-frame" style="bottom: 0px;"><div class="ub-emb-iframe-wrapper ub-emb-visible" style="height: 67px; width: 100%;"><button class="ub-emb-close" type="button">×</button><iframe class="ub-emb-iframe" src="index_2.html" style="width: 100% !important; height: 67px !important;"></iframe></div><div class="ub-emb-iframe-wrapper" style="height: 0px; width: 100%;"><button class="ub-emb-close" type="button">×</button><iframe class="ub-emb-iframe" src="index_1.html" style="width: 100% !important; height: 0px !important;"></iframe></div></div></div></div></div></body>
+<script data-scrapbook-elem="basic-loader">(function () { var k1 = "data-scrapbook-shadowroot", k2 = "data-scrapbook-input-indeterminate", k3 = "data-scrapbook-canvas", fn = function (r) { var E = r.querySelectorAll ? r.querySelectorAll("*") : r.getElementsByTagName("*"), i = E.length, e, d, s; while (i--) { e = E[i]; if (e.hasAttribute(k1) && !e.shadowRoot && e.attachShadow) { d = JSON.parse(e.getAttribute(k1)); s = e.attachShadow({mode: d.mode}); s.innerHTML = d.data; e.removeAttribute(k1); } if (e.shadowRoot) { fn(e.shadowRoot); } if (e.hasAttribute(k2)) { e.indeterminate = true; e.removeAttribute(k2); } if (e.hasAttribute(k3)) { (function () { var c = e, g = new Image(); g.onload = function () { c.getContext('2d').drawImage(g, 0, 0); }; g.src = c.getAttribute(k3); c.removeAttribute(k3); })(); } } }; fn(document); })()</script></html>
